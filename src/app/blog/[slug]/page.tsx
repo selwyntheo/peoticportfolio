@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { getBlogPost, getRecentPosts } from '@/lib/blogData';
+import { getBlogPost, getRecentPosts, getBlogData } from '@/lib/blogData';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 
@@ -10,6 +10,15 @@ interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+// Generate static paths for all blog posts
+export async function generateStaticParams() {
+  const { posts } = getBlogData();
+  
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
