@@ -1,22 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Canvas & Soul - Poetic Portfolio
 
-## Getting Started
+A beautiful Tamil Christian artist portfolio website featuring art gallery, blog, and contact functionality.
 
-First, run the development server:
+## ✨ Features
 
+- **Artistic Portfolio**: Showcase of paintings and artwork
+- **Tamil Heritage**: Beautiful Tamil calligraphy and cultural content
+- **Christian Faith**: Bible verses and spiritual inspiration
+- **Blog System**: Full-featured blog with markdown support
+- **Gallery Management**: Admin panel for artwork management
+- **Contact Form**: Professional contact functionality
+- **Responsive Design**: Mobile-friendly layout
+- **Static Export**: Optimized for fast deployment
+
+## 🚀 Quick Start
+
+### Development
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build for Production
+```bash
+npm run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Test Static Build Locally
+```bash
+npm run serve
+```
+
+## 🛠 Technology Stack
+
+- **Framework**: Next.js 15.5.0 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Content**: Markdown with react-markdown
+- **Deployment**: Static export for Netlify/Vercel
+
+## 🎨 Artist Information
+
+**Artist**: Banu  
+**Heritage**: Tamil Nadu, India  
+**Current Location**: New Jersey, USA  
+**Focus**: Christian art with Tamil cultural influences  
+
+## 🚀 Deployment
+
+### Netlify Deployment
+1. Connect your GitHub repository to Netlify
+2. Build settings are automatically configured via `netlify.toml`
+3. Node.js version is set to 18 via `.node-version`
+
+### Manual Deployment
+```bash
+npm run build
+# Upload the 'out' directory to your hosting provider
+```
+
+## 📝 Content Management
+
+### Blog Posts
+- Stored in `public/dynamic-blogs.json`
+- Markdown content support
+- Admin panel editing (development only)
+
+### Gallery
+- Stored in `public/gallery-data.json`
+- Artwork metadata and images
+- Admin panel management (development only)
+
+## 👩‍🎨 About the Artist
+
+Banu is a Tamil Christian artist originally from Tamil Nadu, India, now residing in New Jersey. Her work beautifully blends traditional Tamil artistic elements with contemporary Christian themes.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
