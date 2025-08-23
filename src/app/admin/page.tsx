@@ -80,9 +80,18 @@ export default function AdminPage() {
 
   // Environment check
   useEffect(() => {
-    if (!isAdminAvailable()) {
-      window.location.href = '/';
-      return;
+    try {
+      if (!isAdminAvailable()) {
+        if (typeof window !== 'undefined') {
+          window.location.href = '/';
+        }
+        return;
+      }
+    } catch (error) {
+      console.error('Admin access check failed:', error);
+      if (typeof window !== 'undefined') {
+        window.location.href = '/';
+      }
     }
   }, []);
 
