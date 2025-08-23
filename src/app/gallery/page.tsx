@@ -1,28 +1,14 @@
 import Link from 'next/link';
 import { getGalleryData } from '@/lib/galleryData';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 export default function GalleryPage() {
   const { artworks } = getGalleryData();
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Canvas & Soul
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-purple-600 transition-colors">Home</Link>
-              <Link href="/blog" className="text-gray-600 hover:text-purple-600 transition-colors">Blog</Link>
-              <Link href="/gallery" className="text-purple-600 font-medium">Gallery</Link>
-              <Link href="/about" className="text-gray-600 hover:text-purple-600 transition-colors">About</Link>
-              <Link href="/contact" className="text-gray-600 hover:text-purple-600 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-800 text-white py-20">
@@ -157,6 +143,7 @@ export default function GalleryPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

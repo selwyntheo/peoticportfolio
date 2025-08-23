@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { isAdminAvailable } from '@/lib/environment';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 interface BlogPost {
   id: number;
@@ -355,24 +357,7 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Canvas & Soul Admin
-            </Link>
-            <div className="flex space-x-4">
-              <Link href="/" className="text-gray-600 hover:text-purple-600 transition-colors">
-                View Site
-              </Link>
-              <Link href="/blog" className="text-gray-600 hover:text-purple-600 transition-colors">
-                View Blog
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -1020,6 +1005,7 @@ export default function AdminPage() {
           </>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 interface ContactFormData {
   name: string;
@@ -65,6 +67,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <Navigation />
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -103,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">sarah.artist@email.com</p>
+                  <p className="text-gray-600">banu.artist@email.com</p>
                   <p className="text-sm text-gray-500 mt-1">I typically respond within 24 hours</p>
                 </div>
               </div>
@@ -117,8 +120,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Location</h3>
-                  <p className="text-gray-600">Mumbai, India</p>
-                  <p className="text-sm text-gray-500 mt-1">Available for commissions worldwide</p>
+                  <p className="text-gray-600">New Jersey, USA</p>
+                  <p className="text-sm text-gray-500 mt-1">Originally from Tamil Nadu, India • Available for commissions worldwide</p>
                 </div>
               </div>
 
@@ -131,7 +134,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Response Time</h3>
                   <p className="text-gray-600">Within 24-48 hours</p>
-                  <p className="text-sm text-gray-500 mt-1">Monday - Saturday, 9 AM - 6 PM IST</p>
+                  <p className="text-sm text-gray-500 mt-1">Monday - Saturday, 9 AM - 6 PM EST</p>
                 </div>
               </div>
             </div>
@@ -339,6 +342,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

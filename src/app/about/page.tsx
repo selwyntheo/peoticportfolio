@@ -1,8 +1,11 @@
 import Image from 'next/image';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <Navigation />
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -25,12 +28,30 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Hello, I'm Sarah
+              Hello, I'm Banu
             </h2>
+            
+            {/* Tamil Introduction with Calligraphy */}
+            <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-6 mb-6">
+              <div className="text-center mb-4">
+                <p className="text-2xl font-light text-purple-800 mb-2" style={{fontFamily: 'serif', letterSpacing: '0.05em'}}>
+                  வணக்கம், நான் பானு
+                </p>
+                <p className="text-sm text-purple-600 italic">Vanakkam, naan Banu (Hello, I'm Banu)</p>
+              </div>
+              <div className="text-center">
+                <p className="text-lg text-purple-700 mb-2" style={{fontFamily: 'serif', letterSpacing: '0.02em'}}>
+                  கலை என் வாழ்க்கை, இயேசு என் வழி
+                </p>
+                <p className="text-sm text-purple-600 italic">Kalai en vaazhkkai, Yesu en vazhi (Art is my life, Jesus is my way)</p>
+              </div>
+            </div>
+
             <div className="prose prose-lg text-gray-700 space-y-4">
               <p>
-                Welcome to my artistic world! I'm a passionate artist from the beautiful landscapes of India, 
-                where vibrant colors, rich traditions, and deep spirituality converge to inspire my creative journey.
+                Welcome to my artistic world! I'm a passionate artist originally from the beautiful state of Tamil Nadu, India, 
+                now residing in New Jersey. My journey from the vibrant landscapes and rich cultural heritage of Tamil Nadu 
+                to the diverse artistic community of New Jersey has deeply enriched my creative expression.
               </p>
               <p>
                 My art is deeply rooted in my Christian faith, and I find endless inspiration in the verses 
@@ -38,9 +59,10 @@ export default function AboutPage() {
                 a reflection of God's magnificent creation.
               </p>
               <p>
-                Growing up in India, I was surrounded by incredible diversity in art, culture, and faith. 
-                This unique environment has profoundly influenced my artistic style, blending traditional 
-                Indian artistic elements with contemporary Christian themes.
+                Growing up in Tamil Nadu, I was surrounded by incredible diversity in art, culture, and faith. 
+                The classical Tanjore paintings, temple architecture, and vibrant festival traditions of my homeland 
+                continue to influence my artistic style, which I now blend with contemporary Christian themes 
+                in my New Jersey studio.
               </p>
             </div>
           </div>
@@ -72,8 +94,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Faith Foundation</h3>
               <p className="text-gray-600">
-                My spiritual journey began in childhood, attending church in Mumbai where I first discovered 
-                the beauty of biblical stories through stained glass windows and religious art.
+                My spiritual journey began in childhood, attending church in Chennai where I first discovered 
+                the beauty of biblical stories through stained glass windows and religious art. The rich Christian 
+                heritage of Tamil Nadu deeply influenced my early understanding of faith.
               </p>
             </div>
             
@@ -108,6 +131,23 @@ export default function AboutPage() {
         {/* Faith & Art Philosophy */}
         <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Faith Through Art</h2>
+          
+          {/* Tamil Christian Verse */}
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <div className="bg-white rounded-xl p-6 shadow-sm border">
+              <p className="text-2xl text-purple-800 mb-3" style={{fontFamily: 'serif', letterSpacing: '0.05em', lineHeight: '1.6'}}>
+                கர்த்தராகிய இயேசுவே என் ஒளி, என் கலை
+              </p>
+              <p className="text-sm text-purple-600 italic mb-4">
+                Karthraagiya Yesuve en oli, en kalai<br/>
+                (Lord Jesus is my light, my art)
+              </p>
+              <div className="flex justify-center">
+                <div className="w-24 h-0.5 bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-400"></div>
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-xl text-gray-700 italic mb-6">
               "Every good and perfect gift is from above, coming down from the Father of the heavenly lights, 
@@ -129,32 +169,49 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Cultural Heritage</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Indian Artistic Traditions</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Tamil Nadu Heritage</h3>
+              
+              {/* Tamil Heritage Quote */}
+              <div className="bg-white border-l-4 border-purple-500 p-4 mb-6">
+                <div className="text-center">
+                  <p className="text-xl text-gray-800 mb-2" style={{fontFamily: 'serif', letterSpacing: '0.03em'}}>
+                    தமிழ் மண்ணின் மணம், கிறிஸ்துவின் அன்பு
+                  </p>
+                  <p className="text-sm text-gray-600 italic mb-3">
+                    Thamizh mannin manam, Christuvin anbu<br/>
+                    (The fragrance of Tamil soil, the love of Christ)
+                  </p>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto"></div>
+                </div>
+              </div>
+
               <div className="prose prose-lg text-gray-700 space-y-4">
                 <p>
-                  Growing up in India has blessed me with exposure to some of the world's most vibrant 
-                  artistic traditions. From the intricate patterns of Madhubani paintings to the bold 
-                  colors of Rajasthani miniatures, these influences permeate my work.
+                  Growing up in Tamil Nadu has blessed me with exposure to some of the world's most vibrant 
+                  artistic traditions. From the intricate gold work of Tanjore paintings to the bold 
+                  colors of Chettinad architecture, and the graceful forms of classical Bharatanatyam, 
+                  these influences permeate my work.
                 </p>
                 <p>
-                  I often incorporate traditional Indian motifs, color palettes, and symbolic elements 
-                  into my contemporary Christian art, creating a unique fusion that speaks to my dual heritage 
-                  as an Indian and a follower of Christ.
+                  I often incorporate traditional Tamil motifs, temple iconography, and the rich color palettes 
+                  of South Indian art into my contemporary Christian pieces, creating a unique fusion that speaks 
+                  to my heritage as a Tamil Christian artist.
                 </p>
               </div>
             </div>
             
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contemporary Expression</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">New Jersey Studio</h3>
               <div className="prose prose-lg text-gray-700 space-y-4">
                 <p>
-                  While honoring traditional techniques, I embrace contemporary methods and materials. 
-                  My work spans various mediums including oils, acrylics, watercolors, and mixed media, 
-                  each chosen to best convey the spiritual message of the piece.
+                  My move to New Jersey has opened new chapters in my artistic journey. The multicultural 
+                  environment here has allowed me to share my Tamil Christian heritage while learning from 
+                  diverse artistic communities. My studio in New Jersey has become a bridge between cultures.
                 </p>
                 <p>
-                  This blend of old and new, East and West, traditional and contemporary, creates 
-                  artwork that resonates with diverse audiences while maintaining deep spiritual significance.
+                  This blend of Tamil traditions with American contemporary art, Tamil heritage with global perspectives, 
+                  East Coast innovation with South Indian spirituality, creates artwork that resonates with 
+                  diverse audiences while maintaining deep cultural and spiritual significance.
                 </p>
               </div>
             </div>
@@ -162,7 +219,7 @@ export default function AboutPage() {
         </div>
 
         {/* Favorite Verses */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Verses That Inspire</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl">
@@ -197,7 +254,29 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        {/* Tamil Blessing */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="mb-6">
+              <p className="text-3xl font-light mb-4" style={{fontFamily: 'serif', letterSpacing: '0.05em', lineHeight: '1.8'}}>
+                உங்கள் வாழ்க்கையில் இயேசுவின் அன்பும் அமைதியும் நிறைந்திருக்கட்டும்
+              </p>
+              <p className="text-purple-200 text-lg italic mb-4">
+                Ungal vaazhkkaiyil Yesuvn anbum amaithiyum nirainthirukattum
+              </p>
+              <p className="text-purple-100 text-base">
+                "May the love and peace of Jesus fill your life"
+              </p>
+            </div>
+            <div className="flex justify-center mb-4">
+              <div className="w-32 h-0.5 bg-gradient-to-r from-purple-200 via-white to-purple-200"></div>
+            </div>
+            <p className="text-purple-200 text-sm">— Banu's Blessing</p>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { getBlogData, getRecentPosts } from '@/lib/blogData';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 export default function BlogPage() {
   const { posts, categories } = getBlogData();
@@ -7,6 +9,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       {/* Navigation - will be imported */}
       <nav className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,6 +153,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

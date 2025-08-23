@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getBlogPost, getRecentPosts } from '@/lib/blogData';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -21,23 +23,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Canvas & Soul
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-purple-600 transition-colors">Home</Link>
-              <Link href="/blog" className="text-purple-600 font-medium">Blog</Link>
-              <Link href="/gallery" className="text-gray-600 hover:text-purple-600 transition-colors">Gallery</Link>
-              <Link href="/about" className="text-gray-600 hover:text-purple-600 transition-colors">About</Link>
-              <Link href="/contact" className="text-gray-600 hover:text-purple-600 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b">
@@ -246,6 +232,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
