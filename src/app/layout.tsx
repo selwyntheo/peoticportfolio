@@ -18,10 +18,10 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   title: "Canvas & Soul - Artistic Portfolio and Blog",
-  description: "Where colors meet emotions and brushstrokes tell stories. Explore paintings, poetry, and creative expressions by Sarah.",
+  description: "Where colors meet emotions and brushstrokes tell stories. Explore paintings, poetry, and creative expressions by Banu.",
   keywords: ["art", "painting", "portfolio", "artist", "creativity", "paintings", "artwork", "blog"],
-  authors: [{ name: "Sarah" }],
-  creator: "Sarah",
+  authors: [{ name: "Banu" }],
+  creator: "Banu",
   openGraph: {
     title: "Canvas & Soul - Artistic Portfolio",
     description: "Where colors meet emotions and brushstrokes tell stories.",

@@ -10,9 +10,7 @@
     "slug": "the-dance-of-colors-finding-inspiration-in-nature",
     "featured": true,
     "readTime": "6 min read",
-    "author": "Banu",
-    "featuredImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&h=630&fit=crop",
-    "imageAlt": "Beautiful autumn landscape with vibrant fall colors reflecting in a peaceful lake surrounded by colorful trees"
+    "author": "Banu"
   },
   {
     "id": 2,
@@ -25,8 +23,6 @@
     "slug": "building-your-first-art-studio-beginners-guide",
     "featured": false,
     "readTime": "8 min read",
-    "author": "Banu",
-    "featuredImage": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=1200&h=630&fit=crop",
-    "imageAlt": "Bright and organized art studio with easel, canvases, paintbrushes, and natural light streaming through large windows"
+    "author": "Banu"
   }
 ]

@@ -13,7 +13,7 @@ export function AboutPreview() {
             
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                Hi, I&apos;m Sarah, a passionate painter who believes that every stroke of the brush carries a piece of the soul. 
+                Hi, I&apos;m Banu, a passionate painter who believes that every stroke of the brush carries a piece of the soul. 
                 My journey began in childhood, sketching dreams on napkins, and has evolved into a lifelong love affair with 
                 color and form.
               </p>
